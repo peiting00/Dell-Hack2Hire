@@ -12,7 +12,7 @@ if (!$conn) {
 }
 
 // Select database
-$dbSelect = mysqli_select_db($conn, 'onlineExam');
+$dbSelect = mysqli_select_db($conn, 'Hack2Hire');
 
 // If database not exist
 if (!$dbSelect) {

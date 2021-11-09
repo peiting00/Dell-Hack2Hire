@@ -3,9 +3,13 @@
     margin-left: auto;
     margin-right: auto;
     height:100%;
-    border:solid;
 }
 
+.divlbl{
+    padding-bottom: 3px;
+    margin-left: 20px;
+    font-size: 17px;
+}
 
 .container-fluid{
     border-radius: 25px;

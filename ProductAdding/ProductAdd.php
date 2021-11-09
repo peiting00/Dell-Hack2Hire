@@ -3,6 +3,7 @@
     <title>Product Adding</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     </head>
@@ -11,7 +12,7 @@
     <div class="container-fluid">
         <div class="form-block">
         <div class = "divLoginHeader"><h1 class = "loginHeader">Product Adding</h1></div><br>
-        <form action="ProductAdd.php" method="POST">
+        <form action="ProductAdd.php" method="POST" target="_top">
             <div class="divInputContainer">
                 <label for="username">Product Name <span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="productName" name="productName" placeholder="Product Name"  required>
@@ -29,7 +30,7 @@
 		    </div>
             <div class = "divRemember">
 			<div class = "divlbl" id = "divErrorMsg">
-				<label id = "errorMsg">Invalid username or password </label>
+				<label id = "errorMsg">Invalid Product Adding</label>
 			</div>
 			
 		</div>
@@ -73,11 +74,12 @@ if(isset($_POST['add'])){
     $addQuery="INSERT INTO product (productName,price,quantity) VALUES ('$productName','$price','$quantity')";
     if(mysqli_query($conn,$addQuery)){
         echo "<script>show_alert('success')</script>";
-        // echo "<script>window.setTimeout(
-        //     function(){
-        //         window.location.href='composition.html';
-        //     },500);</script>";
-        header("location:composition.html");
+        echo "<script>window.setTimeout(
+            function(){
+                window.location.href='../CatAddcomposition.php?op=add';
+            },0);</script>";
+
+        //header("location:./ProductAdding/ProductAdd.php");
     }else{
         echo 
 			"<script type='text/javascript'>

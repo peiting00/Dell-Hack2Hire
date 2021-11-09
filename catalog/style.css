@@ -41,3 +41,11 @@
 	background-color: rgba(230, 75, 55, 1.0);
 	outline:none;
 }
+
+.loginHeader{
+    font-family: "Quicksand";
+    font-size: 30px;
+    font-weight: 50;
+    text-align: center;
+    padding-top: 30px;
+}

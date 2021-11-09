@@ -280,7 +280,7 @@ togglePassword.addEventListener('click', function (e) {
 			$_SESSION['timestart'] = time();
 			$_SESSION['username'] = $username; 
 			
-			header("location: composition.html");
+			header("location: CatAddcomposition.php");
 		}
 		else 
 			echo 

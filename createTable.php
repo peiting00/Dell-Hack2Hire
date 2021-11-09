@@ -22,7 +22,6 @@ $insertProductQuery = "INSERT INTO product (productName,price,quantity) VALUES (
 
 if (mysqli_query($conn, $userSql) && mysqli_query($conn, $productSql) && mysqli_query($conn,$insertUserQuery) && mysqli_query($conn,$insertProductQuery)){
     header("Location:login.php");
-    exit;
 } else {
     echo "Failed to create table: ".mysqli_error($conn);
 }

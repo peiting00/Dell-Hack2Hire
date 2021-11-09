@@ -13,9 +13,14 @@ $productSql= "CREATE TABLE IF NOT EXISTS product(
     productID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     productName VARCHAR(100) NOT NULL,
     price INT NOT NULL,
-    quanitty INT NOT NULL)";
+    quantity INT NOT NULL)";
 
-if (mysqli_query($conn, $userSql) && mysqli_query($conn, $productSql)) {
+$insertUserQuery = "INSERT INTO user (userName,password) VALUES ('Product Manager 1','123')";
+$insertProductQuery = "INSERT INTO product (productName,price,quantity) VALUES ('White Chocolate','28','100'),('Milk Chocolate','48','58'),('Dark Chocolate','58','39')";
+
+
+
+if (mysqli_query($conn, $userSql) && mysqli_query($conn, $productSql) && mysqli_query($conn,$insertUserQuery) && mysqli_query($conn,$insertProductQuery)){
     header("Location:login.php");
     exit;
 } else {

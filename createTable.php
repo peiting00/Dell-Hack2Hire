@@ -9,13 +9,13 @@ $userSql = "CREATE TABLE IF NOT EXISTS user (
     password CHAR(60) NOT NULL)";
 
 // Create table profile if not exists
-$profileSql= "CREATE TABLE IF NOT EXISTS product(
+$productSql= "CREATE TABLE IF NOT EXISTS product(
     productID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     productName VARCHAR(100) NOT NULL,
     price INT NOT NULL,
     quanitty INT NOT NULL)";
 
-if (mysqli_query($conn, $userSql) && mysqli_query($conn, $profileSql)) {
+if (mysqli_query($conn, $userSql) && mysqli_query($conn, $productSql)) {
     header("Location:login.php");
     exit;
 } else {

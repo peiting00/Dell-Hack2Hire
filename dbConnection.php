@@ -17,7 +17,7 @@ $dbSelect = mysqli_select_db($conn, 'Hack2Hire');
 // If database not exist
 if (!$dbSelect) {
     // Create database
-    $dbSql = "CREATE DATABASE onlineExam";
+    $dbSql = "CREATE DATABASE Hack2Hire";
     if (mysqli_query($conn, $dbSql)) {
         echo "Database created successfully";
     } else {

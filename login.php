@@ -69,7 +69,6 @@ ob_start();
 		font-weight: 50;
 		text-align: center;
 		padding-top: 30px;
-		
 	}
 	
 	.divLoginContent{
@@ -95,6 +94,21 @@ ob_start();
 		margin:auto;
 		padding-bottom: 18px;
 		//border:solid;
+	}
+
+	#errorMsg{
+		color: rgba(255, 8, 12, 1.0);
+	}
+
+	#divErrorMsg{
+		display:none;
+		width: 87%;
+		padding: 8px;
+		border-radius: 5px;
+		border:solid;
+		border-width: 2px; 
+		border-color: rgba(255, 57, 43, 1.0);
+		background-color: rgba(255, 224, 224, 1.0);
 	}
 	
 	.inputField{
@@ -220,6 +234,7 @@ ob_start();
 	</form>
 </div>
 <script>
+
 function displayError(){
 	var errorMessage = document.getElementById("divErrorMsg");
 	errorMessage.style.display = "block";

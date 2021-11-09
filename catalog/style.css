@@ -19,3 +19,25 @@
 .grid-item:hover {
 	transform: scale(1.05);
 }
+
+.btnOperation{
+    width: 80px;
+	border: none;
+	cursor: pointer;
+	color: white;
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.btnOperation:hover{
+	opacity: 0.6;
+}
+
+.btnEdit{
+	background-color: rgba(35, 197, 137, 1.0);
+	outline:none;
+}
+.btnDelete{
+	background-color: rgba(230, 75, 55, 1.0);
+	outline:none;
+}

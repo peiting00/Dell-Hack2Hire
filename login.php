@@ -273,24 +273,14 @@ togglePassword.addEventListener('click', function (e) {
 		
 		$queryCheck = mysqli_query($conn, "SELECT password FROM user WHERE userName = '$username'");
 		
-		$sql="SELECT * FROM user WHERE userName = '$username'";
-		$record=mysqli_query($conn,$sql);	
-		
 		$returnUserPass = mysqli_fetch_row($queryCheck);
 		echo $returnUserPass;
 		if($returnUserPass != null &&  $password == $returnUserPass[0]){
-			//session_start();
 			$_SESSION['valid'] = true;
 			$_SESSION['timestart'] = time();
 			$_SESSION['username'] = $username; 
-			$_SESSION['memberID'] = random_strings(8);
-			$_SESSION['validation'] = true;
 			
-			if(mysqli_num_rows($record)==0){
-				header("location: emptyForm.php");
-			}else{
-				header("location: detailForm.php");
-			}
+			header("location: composition.html");
 		}
 		else 
 			echo 
@@ -298,7 +288,6 @@ togglePassword.addEventListener('click', function (e) {
 				displayError();
 			</script>
 			";
-		
 	}
 ob_end_flush();
 	

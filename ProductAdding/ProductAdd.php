@@ -27,6 +27,12 @@
             <div class = "divLoginBtn">
 			<button class = "btnAdd" type="submit" name = "add">Add</button>  <br/><br/>
 		    </div>
+            <div class = "divRemember">
+			<div class = "divlbl" id = "divErrorMsg">
+				<label id = "errorMsg">Invalid username or password </label>
+			</div>
+			
+		</div>
         </form>
         </div>
     </div>
@@ -49,6 +55,11 @@
             $(alertDiv).append("New Product Added!"); 
         }
     }
+
+function displayError(){
+	var errorMessage = document.getElementById("divErrorMsg");
+	errorMessage.style.display = "block";
+}
 </script>
 
 <?php
@@ -62,13 +73,17 @@ if(isset($_POST['add'])){
     $addQuery="INSERT INTO product (productName,price,quantity) VALUES ('$productName','$price','$quantity')";
     if(mysqli_query($conn,$addQuery)){
         echo "<script>show_alert('success')</script>";
-        echo "<script>window.setTimeout(
-            function(){
-                window.location.href='catalog.php';
-            },3000);</script>";
+        // echo "<script>window.setTimeout(
+        //     function(){
+        //         window.location.href='composition.html';
+        //     },500);</script>";
+        header("location:composition.html");
     }else{
-        echo "<script>show_alert('fail-to-add')</script>";
-        exit(0);
+        echo 
+			"<script type='text/javascript'>
+				displayError();
+			</script>
+			";
     }
 
 

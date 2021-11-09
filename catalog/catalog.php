@@ -29,12 +29,17 @@ include($_SERVER['DOCUMENT_ROOT'].'/Hack2Hire/dbConnection.php');
               ID : <?php echo $productGrid [0]; ?>
             </h6>
 
-            <h5 class="card-title">
+            <h4 class="card-title">
               <?php echo $productGrid [1]; ?>  
-            </h5>
+            </h4>
 
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">$ <?php echo $productGrid [2]; ?> each</p>
+            <p class="card-text"><?php echo $productGrid [3]; ?> available</p>
+
+            <div>
+              <a href="#" class="btn btn-primary btnOperation btnEdit">Edit</a>
+              <a href="#" class="btn btn-primary btnOperation btnDelete">Delete</a>
+            </div>
           </div>
         </div>
       <?php

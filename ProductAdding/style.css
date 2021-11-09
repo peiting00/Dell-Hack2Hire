@@ -2,6 +2,7 @@
 .main{
     margin-left: auto;
     margin-right: auto;
+    height:100%;
     border:solid;
 }
 
@@ -12,7 +13,36 @@
     background-color:white;
     margin-left: auto;
     margin-right: auto;
+}
+
+.divRemember{
+    width: 90%;
+    padding: 5px 7px 10px 8px;
+    font-family: Arial;
+    font-size:17px;
+    font-weight: 50;
+    margin: auto;
+}
+
+#remember{
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+}
+
+#errorMsg{
+    color: rgba(255, 8, 12, 1.0);
+}
+
+#divErrorMsg{
+    display:none;
+    width: 87%;
+    padding: 8px;
+    border-radius: 5px;
     border:solid;
+    border-width: 2px; 
+    border-color: rgba(255, 57, 43, 1.0);
+    background-color: rgba(255, 224, 224, 1.0);
 }
 
 .loginHeader{

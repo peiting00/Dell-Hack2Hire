@@ -1,0 +1,70 @@
+
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    border:solid;
+}
+
+
+.container-fluid{
+    border-radius: 25px;
+    width: auto;
+    background-color:white;
+    margin-left: auto;
+    margin-right: auto;
+    border:solid;
+}
+
+.loginHeader{
+    font-family: "Quicksand";
+    font-size: 30px;
+    font-weight: 50;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+.divLoginHeader{
+    border-radius: 25px 25px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-block {
+    font-size: 16px;
+    padding: 25px;
+}
+
+.divInputContainer{
+    width: 90%;
+    margin:auto;
+    padding-bottom: 18px;
+}
+
+.divLoginBtn{
+    width: 90%;
+    margin: auto;
+    padding: 8px 7px 10px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnAdd{
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(146, 57, 0, 1.0);
+    box-shadow: 5px 5px 5px grey;
+    width: 65%;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    outline:none;
+    transition-duration: 0.3s;
+}
+
+.btnAdd:hover{
+    background-color: rgba(201, 111, 52, 1.0);
+    cursor: pointer;
+    transition-duration: 0.3s;
+}

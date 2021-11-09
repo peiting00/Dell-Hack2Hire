@@ -1,0 +1,7 @@
+
+.grid-container-home {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%; 
+	padding: 10px;
+	margin-right: 10px;
+}
